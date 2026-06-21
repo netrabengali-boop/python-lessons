@@ -1,27 +1,13 @@
-def add(P, Q):      
-   return P + Q   
-def subtract(P, Q):    
-   return P - Q   
-def multiply(P, Q):    
-   return P * Q   
-def divide(P, Q):     
-   return P / Q 
-  
-print ("Please select the operation.")    
-print ("a. Add")    
-print ("b. Subtract")    
-print ("c. Multiply")    
-print ("d. Divide")      
-choice = input("Please enter choice (a/ b/ c/ d): ")     
-num_1 = int (input ("Please enter the first number: "))    
-num_2 = int (input ("Please enter the second number: "))    
-if choice == 'a':    
-   print (num_1, " + ", num_2, " = ", add(num_1, num_2))    
-elif choice == 'b':    
-   print (num_1, " - ", num_2, " = ", subtract(num_1, num_2))    
-elif choice == 'c':    
-   print (num_1, " * ", num_2, " = ", multiply(num_1, num_2))  
-elif choice == 'd':    
-   print (num_1, " / ", num_2, " = ", divide(num_1, num_2))    
-else:    
-   print ("This is an invalid input")    
+def factorial(x):
+  '''this is a recursive function to find the factorial of an integer'''
+  if x==0 or x==1:
+      return 1
+  else:
+      return x*factorial(x-1)
+
+print(factorial.__doc__)
+print("the factorial of 0:",factorial(0))
+print("the factorial of 1:",factorial(1))
+print("the factorial of 2:",factorial(2))
+print("the factorial of 5:",factorial(5))
+print("the factorial of 10:",factorial(10))
